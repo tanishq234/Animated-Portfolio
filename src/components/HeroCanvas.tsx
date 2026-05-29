@@ -91,8 +91,8 @@ export default function HeroCanvas() {
         drawHeight = dimensions.height * scale
         drawWidth = drawHeight * imgRatio
       }
-      drawX = (dimensions.width - drawWidth) / 2
-      drawY = (dimensions.height - drawHeight) / 2
+      const drawX = (dimensions.width - drawWidth) / 2
+      const drawY = (dimensions.height - drawHeight) / 2
 
       ctx.drawImage(image, drawX, drawY, drawWidth, drawHeight)
 
