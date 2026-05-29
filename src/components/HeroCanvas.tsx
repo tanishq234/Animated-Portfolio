@@ -83,7 +83,7 @@ export default function HeroCanvas() {
       const imgRatio = image.width / image.height
       const canvasRatio = dimensions.width / dimensions.height
 
-      let drawWidth, drawHeight, drawX, drawY
+      let drawWidth, drawHeight
       if (canvasRatio > imgRatio) {
         drawWidth = dimensions.width * scale
         drawHeight = drawWidth / imgRatio
@@ -91,8 +91,8 @@ export default function HeroCanvas() {
         drawHeight = dimensions.height * scale
         drawWidth = drawHeight * imgRatio
       }
-      drawX = (dimensions.width - drawWidth) / 2
-      drawY = (dimensions.height - drawHeight) / 2
+      const drawX = (dimensions.width - drawWidth) / 2
+      const drawY = (dimensions.height - drawHeight) / 2
 
       ctx.drawImage(image, drawX, drawY, drawWidth, drawHeight)
 
